@@ -9,22 +9,27 @@ document.querySelectorAll(".styles img").forEach((img) => {
   img.addEventListener("click", (e) => {
     // If There Is Value In The Input Make This
     if (name.value !== "" && freindName.value !== "") {
-      // The Pattern (The Selected Style)
+      let imgObj = new Image();
+      imgObj.onload = function () {
+        // The Pattern (The Selected Style)
 
-      ctx.fillStyle = ctx.createPattern(e.target, "no-repeat");
-      ctx.fillRect(0, 0, 600, 400);
-      // Make The Style And Add The User Name And His Freind Name
-      ctx.fillStyle = "white";
-      ctx.font = "30px serif";
-      ctx.fillText(`من: ${name.value}`, 5, c.height - 50);
-      ctx.fillText(`الى: ${freindName.value}`, 5, c.height - 10);
+        ctx.fillStyle = ctx.createPattern(imgObj, "no-repeat");
+        ctx.fillRect(0, 0, c.width, c.height);
+        // Make The Style And Add The User Name And His Freind Name
+        ctx.fillStyle = "white";
+        ctx.font = "30px serif";
+        ctx.fillText(`من: ${name.value}`, 5, c.height - 50);
+        ctx.fillText(`الى: ${freindName.value}`, 5, c.height - 10);
 
-      // Set The Style Place
-      document.querySelector(".target-style").style.top = `${
-        window.pageYOffset +
-        document.querySelector(".target-style canvas").height -
-        100
-      }px`;
+        // Set The Style Place
+        document.querySelector(".target-style").style.top = `${
+          window.pageYOffset +
+          document.querySelector(".target-style canvas").height -
+          100
+        }px`;
+      };
+      // Set The Source
+      imgObj.src = e.target.src;
 
       // Appear The Style
       c.parentElement.classList.remove("hide");
