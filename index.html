@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>بطاقات تهنيئة لرمضان</title>
+    <!-- Main Style File  -->
+    <link rel="stylesheet" href="styles/style.css" />
+    <!-- Font Awesome  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <!-- Font Google  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500&family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- The Title  -->
+    <h2 class="title">بطاقات تهنيئة لرمضان</h2>
+
+    <!-- Inputs Center  -->
+    <div class="container">
+      <label for="name">اسمك</label>
+      <input type="text" id="name" placeholder="أكتب اسمك" required />
+      <p id="worning-name">لا يمكن ترك هذا الحقل فارغ</p>
+      <label for="freindName">اسم صديقك</label>
+      <input
+        type="text"
+        id="freindName"
+        placeholder="أكتب اسم صديقك"
+        required
+      />
+      <p id="worning-freind-name">لا يمكن ترك هذا الحقل فارغ</p>
+    </div>
+
+    <!-- Styles Center  -->
+    <h2 class="title">التصاميم</h2>
+    <div class="styles">
+      <figcaption>
+        <img src="images/01.jpg" alt="" />
+      </figcaption>
+      <figcaption>
+        <img src="images/02.jpg" alt="" />
+      </figcaption>
+      <figcaption>
+        <img src="images/03.jpg" alt="" />
+      </figcaption>
+      <figcaption>
+        <img src="images/04.jpg" alt="" />
+      </figcaption>
+      <figcaption>
+        <img src="images/05.jpg" alt="" />
+      </figcaption>
+      <figcaption>
+        <img src="images/06.jpg" alt="" />
+      </figcaption>
+      <figcaption>
+        <img src="images/07.jpg" alt="" />
+      </figcaption>
+      <figcaption>
+        <img src="images/08.jpg" alt="" />
+      </figcaption>
+      <figcaption>
+        <img src="images/09.webp" alt="" />
+      </figcaption>
+      <figcaption>
+        <img src="images/10.jpg" alt="" />
+      </figcaption>
+    </div>
+
+    <!-- Canvas Center  -->
+    <div class="target-style hide">
+      <!-- Cansel Button  -->
+      <span id="cansel">X</span>
+      <!-- Save Button  -->
+      <a id="save">حفظ</a>
+      <!-- The Canvas  -->
+      <canvas width="600" height="400"></canvas>
+    </div>
+    <!-- Main javaScript File  -->
+    <script src="./scripts/main.js"></script>
+  </body>
+</html>
