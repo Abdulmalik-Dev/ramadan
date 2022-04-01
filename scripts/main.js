@@ -69,14 +69,9 @@ document
 
 // To Download The Style
 document.getElementById("save").addEventListener("click", (el) => {
-  // Create Link To download The Image
-  let link = document.createElement("a");
-  link.download = "رمضان.png";
-  link.href = c.toDataURL();
-
-  document.body.appendChild(link);
-  // Download The Image
-  link.click();
-  // Remove The Link Form Dom Tree
-  link.remove();
+  el.target.setAttribute(
+    "href",
+    c.toDataURL("image/png").replace("image/png", "image/octet-stream")
+  );
+  el.target.setAttribute("download", "رمضان.png");
 });
